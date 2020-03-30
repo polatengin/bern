@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 
 import { LandingPage } from './pages/landing/landing';
+
 const routes: Routes = [
   {
     path: '',
@@ -20,6 +21,7 @@ const routes: Routes = [
     component: LandingPage
   }
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   providers: [
     StatusBar,
