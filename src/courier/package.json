@@ -12,12 +12,12 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "8.2.14",
-    "@angular/core": "8.2.14",
-    "@angular/forms": "8.2.14",
-    "@angular/platform-browser": "8.2.14",
-    "@angular/platform-browser-dynamic": "8.2.14",
-    "@angular/router": "8.2.14",
+    "@angular/common": "9.1.0",
+    "@angular/core": "9.1.0",
+    "@angular/forms": "9.1.0",
+    "@angular/platform-browser": "9.1.0",
+    "@angular/platform-browser-dynamic": "9.1.0",
+    "@angular/router": "9.1.0",
     "@capacitor/core": "1.5.2",
     "@ionic-native/core": "5.23.0",
     "@ionic-native/splash-screen": "5.23.0",
@@ -29,17 +29,17 @@
     "zone.js": "0.10.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "0.803.20",
-    "@angular/cli": "8.3.23",
-    "@angular/compiler": "8.2.14",
-    "@angular/compiler-cli": "8.2.14",
-    "@angular/language-service": "8.2.14",
+    "@angular-devkit/build-angular": "0.901.0",
+    "@angular/cli": "9.1.0",
+    "@angular/compiler": "9.1.0",
+    "@angular/compiler-cli": "9.1.0",
+    "@angular/language-service": "9.1.0",
     "@capacitor/cli": "1.5.2",
     "@ionic/angular-toolkit": "2.2.0",
-    "@types/node": "8.9.4",
+    "@types/node": "13.9.5",
     "codelyzer": "5.2.2",
     "ts-node": "8.8.1",
     "tslint": "6.1.0",
-    "typescript": "3.4.3"
+    "typescript": "3.8.3"
   }
 }
