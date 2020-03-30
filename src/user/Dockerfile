@@ -13,3 +13,14 @@ COPY . /app
 RUN npm install
 RUN npm install -g @angular/cli
 RUN ng build --prod --output-path=/app/dist
+
+FROM nginx:1.17.9-alpine as production
+
+USER root
+
+COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/default.conf /etc/nginx/conf.d
+
+RUN nginx
+
+EXPOSE 80
