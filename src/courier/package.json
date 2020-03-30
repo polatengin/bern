@@ -6,7 +6,7 @@
   "homepage": "https://grow-cherry.com/",
   "scripts": {
     "ng": "ng",
-    "start": "ionic serve --port 8200",
+    "start": "ionic serve --port 8200 --no-open",
     "build": "ng build",
     "lint": "ng lint"
   },
