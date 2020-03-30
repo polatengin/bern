@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "json-server ./server.js"
   },
   "author": "",
   "license": "ISC",
