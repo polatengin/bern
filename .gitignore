@@ -1,0 +1,5 @@
+# general
+node_modules/
+dist/
+.vscode/
+tmp/
