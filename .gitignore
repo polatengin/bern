@@ -3,3 +3,26 @@ node_modules/
 dist/
 .vscode/
 tmp/
+
+# ionic
+*~
+*.sw[mnpcod]
+.tmp
+*.tmp
+*.tmp.*
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+$RECYCLE.BIN/
+
+*.log
+log.txt
+npm-debug.log*
+
+.ionic/
+.sass-cache/
+.sourcemaps/
+coverage/
+platforms/
+plugins/
+www/
