@@ -23,3 +23,6 @@ RUN apt-get update \
     #
     # Install global tools
     && npm i -g @angular/cli @ionic/cli npm-check-updates \
+    #
+    # [Optional] Add sudo support for the non-root user
+    && apt-get install -y sudo \
