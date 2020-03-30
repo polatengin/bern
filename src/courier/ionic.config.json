@@ -1,0 +1,7 @@
+{
+  "name": "GrowCherry",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

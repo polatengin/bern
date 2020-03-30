@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "GrowCherry",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
