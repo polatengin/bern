@@ -11,6 +11,38 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent implements OnInit {
   public selectedIndex = 0;
+  public appPages = [
+    {
+      title: 'Order List',
+      url: '/folder/Inbox',
+      icon: 'mail'
+    },
+    {
+      title: 'Ride History',
+      url: '/folder/Outbox',
+      icon: 'paper-plane'
+    },
+    {
+      title: 'Shopping List',
+      url: '/folder/Favorites',
+      icon: 'heart'
+    },
+    {
+      title: 'Order History',
+      url: '/folder/Archived',
+      icon: 'archive'
+    },
+    {
+      title: 'Summary',
+      url: '/folder/Trash',
+      icon: 'trash'
+    },
+    {
+      title: 'Order Details',
+      url: '/folder/Spam',
+      icon: 'warning'
+    }
+  ];
 
   constructor(platform: Platform, splashScreen: SplashScreen, statusBar: StatusBar) {
     platform.ready().then(() => {
