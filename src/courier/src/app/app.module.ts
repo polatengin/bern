@@ -23,6 +23,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    LandingPage
   ],
   entryComponents: [],
   imports: [
