@@ -11,6 +11,10 @@ import { AppComponent } from './app.component';
 
 import { LandingPage } from './pages/landing/landing';
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'landing',
+    pathMatch: 'full'
   }, {
     path: 'landing',
     component: LandingPage
