@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 
+import { LandingPage } from './pages/landing/landing';
 @NgModule({
   declarations: [
   ],
