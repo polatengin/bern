@@ -28,6 +28,7 @@ const routes: Routes = [
   entryComponents: [],
   imports: [
     BrowserModule,
+    IonicModule.forRoot(),
   ],
   providers: [
     StatusBar,
