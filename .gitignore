@@ -26,3 +26,7 @@ coverage/
 platforms/
 plugins/
 www/
+
+# angular
+out-tsc/
+bazel-out/
