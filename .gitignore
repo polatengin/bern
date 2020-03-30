@@ -30,3 +30,7 @@ www/
 # angular
 out-tsc/
 bazel-out/
+
+# profiling
+chrome-profiler-events*.json
+speed-measure-plugin*.json
