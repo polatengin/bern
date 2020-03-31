@@ -11,6 +11,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 
+import { ApiService } from './services/api.service';
+
 import { LandingPage } from './pages/landing/landing';
 
 const routes: Routes = [
@@ -40,6 +42,7 @@ const routes: Routes = [
   providers: [
     StatusBar,
     SplashScreen,
+    ApiService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
