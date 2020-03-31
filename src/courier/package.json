@@ -18,6 +18,7 @@
     "@angular/platform-browser": "9.1.0",
     "@angular/platform-browser-dynamic": "9.1.0",
     "@angular/router": "9.1.0",
+    "@capacitor/android": "1.5.2",
     "@capacitor/core": "1.5.2",
     "@ionic-native/core": "5.23.0",
     "@ionic-native/google-maps": "5.5.0",
