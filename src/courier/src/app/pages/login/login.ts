@@ -13,14 +13,17 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./login.scss'],
 })
 export class LoginPage implements OnInit {
-  constructor(private api: ApiService, private router: Router, private toastController: ToastController) { }
+  constructor(
+    private api: ApiService, 
+    private router: Router, 
+    private toastController: ToastController
+  ) { }
 
-  model: LoginModel = new LoginModel();
+  public model: LoginModel = new LoginModel();
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  login() {
+  public login(): void {
     this.api.login(this.model).subscribe(_ => {
       this.router.navigate(['/main']);
     }, async error => {
