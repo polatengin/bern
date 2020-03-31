@@ -8,7 +8,8 @@
     "ng": "ng",
     "start": "ionic serve --port 8200 --no-open",
     "build": "ng build",
-    "lint": "ng lint"
+    "cap-init": "npx @capacitor/cli init growcherry com.growcherry.courier",
+    "cap-sync": "npx @capacitor/cli sync"
   },
   "private": true,
   "dependencies": {
