@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server ./server.js"
+    "start": "json-server ./server.js --routes ./routes.json --no-cors"
   },
   "author": "",
   "license": "ISC",
