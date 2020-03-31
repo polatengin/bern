@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { ApiService } from './services/api.service';
 
 import { LandingPage } from './pages/landing/landing';
+import { LoginPage } from './pages/login/login';
 
 const routes: Routes = [
   {
@@ -29,7 +30,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPage
+    LandingPage,
+    LoginPage,
   ],
   entryComponents: [],
   imports: [
