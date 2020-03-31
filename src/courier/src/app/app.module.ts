@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { PreloadAllModules, RouterModule, Routes, RouteReuseStrategy } from '@angular/router';
 
@@ -32,6 +33,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     IonicModule.forRoot(),
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
