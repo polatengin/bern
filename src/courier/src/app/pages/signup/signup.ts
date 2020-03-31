@@ -13,12 +13,15 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./signup.scss'],
 })
 export class SignUpPage implements OnInit {
-  constructor(private api: ApiService, private router: Router, private toastController: ToastController) { }
+  constructor(
+    private api: ApiService,
+    private router: Router,
+    private toastController: ToastController
+  ) { }
 
-  model: SignUpModel = new SignUpModel();
+  public model: SignUpModel = new SignUpModel();
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   createAccount() {
     this.api.signup(this.model).subscribe(_ => {

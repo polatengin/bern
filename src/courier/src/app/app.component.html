@@ -6,8 +6,14 @@
           <ion-list-header>Grow Cherry</ion-list-header>
           <ion-note>Social Shopping</ion-note>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of menuItems; let i = index">
-            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of menuItems; let i = index; trackBy: trackByFunction">
+            <ion-item
+              (click)="selectedIndex = i"
+              routerDirection="root"
+              [routerLink]="[p.url]"
+              lines="none"
+              detail="false"
+              [class.selected]="selectedIndex == i">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
