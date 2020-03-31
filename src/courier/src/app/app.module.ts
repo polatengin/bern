@@ -26,6 +26,9 @@ const routes: Routes = [
   }, {
     path: 'landing',
     component: LandingPage
+  }, {
+    path: 'login',
+    component: LoginPage
   }
 ];
 
