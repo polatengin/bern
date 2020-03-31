@@ -53,7 +53,14 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleDarkTheme(event) {
+  toggleDarkTheme(event): void {
     document.body.classList.toggle('dark', event.detail.checked);
+  }
+
+  public trackByFunction(index, item): null | number {
+    if(!item) {
+      return null;
+    }
+    return index;
   }
 }

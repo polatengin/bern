@@ -6,7 +6,7 @@
           <ion-list-header>Grow Cherry</ion-list-header>
           <ion-note>Social Shopping</ion-note>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of menuItems; let i = index">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of menuItems; let i = index; trackBy: trackByFunction">
             <ion-item
               (click)="selectedIndex = i"
               routerDirection="root"
