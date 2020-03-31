@@ -2,7 +2,7 @@
 
 [Hackorona - Creativity will not be quarantined](https://hackorona.in.dev/)
 
-## The Problem
+## Problem
 
 The coronavirus pandemic created new restrictions that grocery stores and Supermarkets  have to work under: In Israel, a business must not hold more than 10 customers within the same store. It was also said that citizens should avoid leaving home as much as possible.
 
