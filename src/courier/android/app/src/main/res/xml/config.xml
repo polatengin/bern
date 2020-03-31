@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <access origin="*" />
+  
+  <feature name="CordovaGoogleMaps">
+    <param name="android-package" value="plugin.google.maps.CordovaGoogleMaps"/>
+    <param name="onload" value="true"/>
+    <param name="onreset" value="true"/>
+  </feature>
+  <feature name="PluginMap">
+    <param name="android-package" value="plugin.google.maps.PluginMap"/>
+  </feature>
+  <feature name="PluginPolyline">
+    <param name="android-package" value="plugin.google.maps.PluginPolyline"/>
+  </feature>
+  <feature name="PluginPolygon">
+    <param name="android-package" value="plugin.google.maps.PluginPolygon"/>
+  </feature>
+  <feature name="PluginMarker">
+    <param name="android-package" value="plugin.google.maps.PluginMarker"/>
+  </feature>
+  <feature name="PluginCircle">
+    <param name="android-package" value="plugin.google.maps.PluginCircle"/>
+  </feature>
+  <feature name="PluginTileOverlay">
+    <param name="android-package" value="plugin.google.maps.PluginTileOverlay"/>
+  </feature>
+  <feature name="PluginGroundOverlay">
+    <param name="android-package" value="plugin.google.maps.PluginGroundOverlay"/>
+  </feature>
+  <feature name="PluginKmlOverlay">
+    <param name="android-package" value="plugin.google.maps.PluginKmlOverlay"/>
+  </feature>
+  <feature name="PluginGeocoder">
+    <param name="android-package" value="plugin.google.maps.PluginGeocoder"/>
+  </feature>
+  <feature name="PluginLocationService">
+    <param name="android-package" value="plugin.google.maps.PluginLocationService"/>
+  </feature>
+  <feature name="PluginEnvironment">
+    <param name="android-package" value="plugin.google.maps.PluginEnvironment"/>
+  </feature>
+  <feature name="PluginMarkerCluster">
+    <param name="android-package" value="plugin.google.maps.PluginMarkerCluster"/>
+  </feature>
+  <feature name="PluginStreetViewPanorama">
+    <param name="android-package" value="plugin.google.maps.PluginStreetViewPanorama"/>
+  </feature>
+
+  
+</widget>
