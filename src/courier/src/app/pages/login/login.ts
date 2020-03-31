@@ -21,5 +21,17 @@ export class LoginPage implements OnInit {
   }
 
   login() {
+    this.api.login(this.model).subscribe(_ => {
+      this.router.navigate(['/main']);
+    }, async error => {
+      const toast = await this.toastController.create({
+        header: 'Oh No!',
+        message: "We couldn't logged you in 😢",
+        position: 'top',
+        color: 'danger',
+        duration: 10 * 1000
+      });
+      toast.present();
+    });
   }
 }
