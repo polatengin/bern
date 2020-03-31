@@ -1,0 +1,44 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Grow Cherry</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Grow Cherry</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <img src="./assets/landing-card-header.png">
+    <ion-card-header>
+      <ion-card-subtitle>Grow Cherry</ion-card-subtitle>
+      <ion-card-title>Social Shopping</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      You can login to your account using form below :)
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list lines="full" class="ion-no-margin ion-no-padding">
+    <ion-item>
+      <ion-label position="stacked">Phone Number <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="tel" [(ngModel)]="model.phoneNumber"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Password <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="password" [(ngModel)]="model.password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-padding">
+    <ion-button expand="block" class="ion-no-margin" (click)="login()">Login</ion-button>
+  </div>
+</ion-content>
