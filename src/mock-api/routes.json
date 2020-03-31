@@ -1,3 +1,4 @@
 {
   "/courier/signup": "/courier_signup",
+  "/courier/login": "/courier_login"
 }
