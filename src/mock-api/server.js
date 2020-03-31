@@ -5,6 +5,9 @@ module.exports = function () {
     courier_signup: {
       result: true
     },
+    courier_login: {
+      result: true
+    },
     search: {
       id: faker.random.number({ min:1000, max:9999 }),
       profilePictureUrl: faker.internet.avatar(),
