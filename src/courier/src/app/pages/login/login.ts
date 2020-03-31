@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.scss'],
 })
 export class LoginPage implements OnInit {
+  model: LoginModel = new LoginModel();
   ngOnInit() {
   }
 
