@@ -16,6 +16,7 @@ import { ApiService } from './services/api.service';
 import { LandingPage } from './pages/landing/landing';
 import { LoginPage } from './pages/login/login';
 import { SignUpPage } from './pages/signup/signup';
+import { MainPage } from './pages/main/main';
 
 const routes: Routes = [
   {
@@ -34,6 +35,7 @@ const routes: Routes = [
     LandingPage,
     LoginPage,
     SignUpPage,
+    MainPage
   ],
   entryComponents: [],
   imports: [
