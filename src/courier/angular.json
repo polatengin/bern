@@ -98,7 +98,9 @@
               "tsconfig.app.json",
               "tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "ionic-cordova-build": {
@@ -129,7 +131,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@ionic/angular-toolkit"
+    "defaultCollection": "@ionic/angular-toolkit",
+    "analytics": "c3aa0070-2e0b-448b-b208-0ffebec12d00"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
