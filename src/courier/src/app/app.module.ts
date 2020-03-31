@@ -32,6 +32,9 @@ const routes: Routes = [
   }, {
     path: 'signup',
     component: SignUpPage
+  }, {
+    path: 'main',
+    component: MainPage
   }
 ];
 
