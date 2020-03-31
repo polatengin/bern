@@ -10,16 +10,15 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public selectedIndex = 0;
-  public appPages = [
+  public menuItems = [
     {
-      title: 'Order List',
-      url: '/folder/Inbox',
+      title: 'Login',
+      url: '/login',
       icon: 'mail'
     },
     {
-      title: 'Ride History',
-      url: '/folder/Outbox',
+      title: 'SignUp',
+      url: '/signup',
       icon: 'paper-plane'
     },
     {
