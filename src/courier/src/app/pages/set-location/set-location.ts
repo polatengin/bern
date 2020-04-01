@@ -5,6 +5,8 @@ import { ModalController } from '@ionic/angular';
 
 import { ApiService } from '../../services/api.service';
 
+import { AddressFromCoordinatesRequestModel, SearchAddressRequestModel, SearchAddressResponseModel } from '../../models/set-location.models';
+
 @Component({
   selector: 'app-set-location',
   templateUrl: './set-location.html',
