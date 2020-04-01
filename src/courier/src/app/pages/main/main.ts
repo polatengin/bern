@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { PickerOptions } from "@ionic/core";
-import { PickerController } from '@ionic/angular';
+import { PickerController, ModalController } from '@ionic/angular';
 
 import { ApiService } from '../../services/api.service';
 
