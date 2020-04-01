@@ -15,11 +15,14 @@
   </ion-header>
 
   <ion-card>
-    <img src="./assets/landing-card-header.png">
-    <ion-card-header>
-      <ion-card-subtitle>Grow Cherry</ion-card-subtitle>
-      <ion-card-title>Social Shopping</ion-card-title>
-    </ion-card-header>
+    <agm-map
+      [style.height.px]="300"
+      [zoom]="18"
+      [latitude]="request.latitude"
+      [longitude]="request.longitude">
+      <agm-circle [latitude]="request.latitude" [longitude]="request.longitude" [radius]="50" [fillColor]="'lightblue'"></agm-circle>
+      <agm-marker [latitude]="request.latitude" [longitude]="request.longitude" [iconUrl]="{url: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA7UlEQVQ4jaXTP0oDQRSA8V+GHEMYELH3BibYiWDjCUQklaClpdiJYDWGeAMbDyA7V7AQ7cSIh0gRgsXu6hpIJOtXPt73mHl/OuboDcabOMIO1qvwBwoMc4ovzfxOQ+ziEqfozheumOEWZznFyXeBSr7H/gJxnkfs5RQnoQpcrCBTfu8GOr3BeAOvS569iBm2Ag5byBAwCNhuIdf0g59RtWEt/J2znID3f/ifQblhbSkCRpi2kGcYhpziG65bFLjLKT7VTTzHwwpygRPKJsopTnGAK8u/Ux/T7q9jalKd8zH6yh2pJ1VglFN8buZ/Af66OTNI7DAVAAAAAElFTkSuQmCC', anchor: {x:8,y:8}}"></agm-marker>
+    </agm-map>
 
     <ion-card-content>
       The coronavirus pandemic created new restrictions that grocery stores and Supermarkets  have to work under: In Israel, a business must not hold more than 10 customers within the same store. It was also said that citizens should avoid leaving home as much as possible.
