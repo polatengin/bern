@@ -3,26 +3,53 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Grow Cherry</ion-title>
+    <ion-title>Search for new deliveries</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen>
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Grow Cherry</ion-title>
+      <ion-title size="large">Search for new deliveries</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-card>
-    <img src="./assets/landing-card-header.png">
-    <ion-card-header>
-      <ion-card-subtitle>Grow Cherry</ion-card-subtitle>
-      <ion-card-title>Social Shopping</ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content>
-      The coronavirus pandemic created new restrictions that grocery stores and Supermarkets  have to work under: In Israel, a business must not hold more than 10 customers within the same store. It was also said that citizens should avoid leaving home as much as possible.
-    </ion-card-content>
+    <ion-button size="small" shape="round" style="z-index:2; position:absolute;" [routerLink]="['/set-location']"><ion-icon slot="start" name="locate-outline"></ion-icon> My current location</ion-button>
+    <ion-button size="small" shape="round" style="z-index:2; position:absolute; right:0;" (click)="setRange()">3 km <ion-icon slot="end" name="chevron-down-outline"></ion-icon></ion-button>
+    <agm-map
+      [style.height.px]="300"
+      [zoom]="18"
+      [latitude]="request.latitude"
+      [longitude]="request.longitude">
+      <agm-circle [latitude]="request.latitude" [longitude]="request.longitude" [radius]="50" [fillColor]="'lightblue'"></agm-circle>
+      <agm-marker [latitude]="request.latitude" [longitude]="request.longitude" [iconUrl]="{url: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA7UlEQVQ4jaXTP0oDQRSA8V+GHEMYELH3BibYiWDjCUQklaClpdiJYDWGeAMbDyA7V7AQ7cSIh0gRgsXu6hpIJOtXPt73mHl/OuboDcabOMIO1qvwBwoMc4ovzfxOQ+ziEqfozheumOEWZznFyXeBSr7H/gJxnkfs5RQnoQpcrCBTfu8GOr3BeAOvS569iBm2Ag5byBAwCNhuIdf0g59RtWEt/J2znID3f/ifQblhbSkCRpi2kGcYhpziG65bFLjLKT7VTTzHwwpygRPKJsopTnGAK8u/Ux/T7q9jalKd8zH6yh2pJ1VglFN8buZ/Af66OTNI7DAVAAAAAElFTkSuQmCC', anchor: {x:8,y:8}}"></agm-marker>
+    </agm-map>
   </ion-card>
+
+  <div *ngIf="loading">
+    <ion-list>
+      <ion-item *ngFor="let i of [0,1,2,3,4,5,6,7,8]">
+        <ion-label>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+          <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ion-list scroll *ngIf="!loading">
+    <ion-item *ngFor="let r of response; let i = index">
+      <ion-label>
+        <h2>{{ r.address }}</h2>
+        <h3>{{ r.firstName }} {{ r.lastName }}</h3>
+        <p>{{ r.dueDate | amTimeAgo }}</p>
+      </ion-label>
+      <ion-button slot="end" fill="clear" (click)="showDetails(r)">
+        Go <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

@@ -1,25 +1,23 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>Grow Cherry</ion-list-header>
-          <ion-note>Social Shopping</ion-note>
-
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of menuItems; let i = index; trackBy: trackByFunction">
-            <ion-item
-              (click)="selectedIndex = i"
-              routerDirection="root"
-              [routerLink]="[p.url]"
-              lines="none"
-              detail="false"
-              [class.selected]="selectedIndex == i">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+      <div class="ion-color ion-color-primary" style="background-color: var(--ion-color-primary);">
+        <div class="ion-padding">
+          <ion-avatar class="ion-margin-vertical">
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
+          </ion-avatar>
+          <ion-title class="ion-no-padding ion-margin-vertical" style="color:var(--ion-color-primary-contrast);">Yael Ron</ion-title>
+          <ion-label class="ion-padding-vertical" style="color:var(--ion-color-primary-contrast);">+90 532 216 58 71</ion-label>
+        </div>
+        <div>
+          <ion-menu-toggle auto-hide="false" *ngFor="let m of menuItems; let i = index">
+            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[m.url]" lines="none" [class.selected]="selectedIndex==i" style="border-radius:0;">
+              <ion-icon slot="start" [name]="m.icon"></ion-icon>
+              <ion-label>{{ m.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
-        </ion-list>
-      </ion-content>
+          </div>
+      </div>
       <ion-footer class="ion-no-border">
         <ion-list>
           <ion-item lines="full">

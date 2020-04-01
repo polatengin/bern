@@ -12,24 +12,29 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent implements OnInit {
   public menuItems = [
     {
-      title: 'Login',
-      url: '/login',
-      icon: 'mail'
+      title: 'Search for Deliveries',
+      url: '/main',
+      icon: 'search-outline'
     },
     {
-      title: 'SignUp',
-      url: '/signup',
-      icon: 'paper-plane'
+      title: 'Profile',
+      url: '/profile',
+      icon: 'person-outline'
+    },
+    {
+      title: 'Delivery history',
+      url: '/delivery-history',
+      icon: 'cube-outline'
+    },
+    {
+      title: 'Reports',
+      url: '/reports',
+      icon: 'document-text-outline'
     },
     {
       title: 'Shopping List',
       url: '/folder/Favorites',
       icon: 'heart'
-    },
-    {
-      title: 'Order History',
-      url: '/folder/Archived',
-      icon: 'archive'
     },
     {
       title: 'Summary',

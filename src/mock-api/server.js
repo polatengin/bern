@@ -8,6 +8,19 @@ module.exports = function () {
     courier_login: {
       result: true
     },
+    courier_main: _.times(12, function(i) {
+      return {
+        id: i,
+        latitude: Number(faker.address.latitude()),
+        longitude: Number(faker.address.longitude()),
+        range: faker.random.number({min: 1, max: 3, precision: 0.01}),
+        address: faker.address.streetAddress("###"),
+        firstName: faker.name.firstName(),
+        lastName: faker.name.lastName(),
+        phoneNumber: faker.phone.phoneNumberFormat(),
+        dueDate: faker.date.recent(-1)
+      }
+    }),
     search: {
       id: faker.random.number({ min:1000, max:9999 }),
       profilePictureUrl: faker.internet.avatar(),

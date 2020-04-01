@@ -3,9 +3,9 @@ import { Router } from '@angular/router';
 
 import { ToastController } from '@ionic/angular';
 
-import { SignUpModel } from '../../models/signup.models';
-
 import { ApiService } from 'src/app/services/api.service';
+
+import { SignUpRequestModel, SignUpResponseModel } from '../../models/signup.models';
 
 @Component({
   selector: 'app-signup',
@@ -19,23 +19,31 @@ export class SignUpPage implements OnInit {
     private toastController: ToastController
   ) { }
 
-  public model: SignUpModel = new SignUpModel();
+  model: SignUpRequestModel = new SignUpRequestModel();
 
   ngOnInit() {}
 
   createAccount() {
-    this.api.signup(this.model).subscribe(_ => {
-      this.router.navigate(['/main']);
+    this.api.signup(this.model).subscribe(async _ => {
+      if (_.result) {
+        this.router.navigate(['/signup-verify'], { state: { phoneNumber: this.model.phoneNumber } });
+      } else {
+        await this.accountCreationFailed();
+      }
     }, async error => {
-      const toast = await this.toastController.create({
-        header: 'Oh No!',
-        message: "We couldn't create your account 😢",
-        position: 'top',
-        color: 'danger',
-        duration: 10 * 1000
-      });
-      toast.present();
+      await this.accountCreationFailed();
     });
+  }
+
+  private async accountCreationFailed() {
+    const toast = await this.toastController.create({
+      header: 'Oh No!',
+      message: "We couldn't create your account 😢",
+      position: 'top',
+      color: 'danger',
+      duration: 10 * 1000
+    });
+    toast.present();
   }
 
 }

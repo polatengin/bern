@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { SignUpModel } from '../models/signup.models';
+import { SignUpRequestModel, SignUpResponseModel } from '../models/signup.models';
 import { LoginModel } from '../models/login.models';
+import { DeliveryListRequestModel, DeliveryListResponseModel } from '../models/main.models';
 
 import { environment } from '../../environments/environment';
 
@@ -16,12 +17,16 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  signup(model: SignUpModel): Observable<boolean> {
-    return this.http.post<boolean>(BASE + 'signup/', model);
+  signup(model: SignUpRequestModel): Observable<SignUpResponseModel> {
+    return this.http.post<SignUpResponseModel>(BASE + 'courier/signup', model);
   }
 
   login(model: LoginModel): Observable<boolean> {
     return this.http.post<boolean>(BASE + 'login/', model);
+  }
+
+  deliveryList(model: DeliveryListRequestModel): Observable<DeliveryListResponseModel[]> {
+    return this.http.post<DeliveryListResponseModel[]>(BASE + 'courier/main', model);
   }
 
 }
