@@ -23,41 +23,14 @@ module.exports = function () {
     }),
     courier_address_from_coordinates: {
       address: faker.address.streetAddress("###")
-              },
-              value: faker.random.number({ min:1000, max:9999 }),
-              price: faker.finance.amount(100,900,2)
-            };
-          })
-        }
-      },
-      additionalPackages: _.times(10, function(i) {
-        return {
-          id: faker.random.number({ min:1000, max:9999 }),
-          name: faker.random.words(2),
-          type: {
-            id: faker.random.number({ min:1000, max:9999 }),
-            name: faker.random.words(2),
-            unit: faker.internet.password(8,1)
-          },
-          value: faker.random.number({ min:1000, max:9999 }),
-          price: faker.finance.amount(100,900,2)
-        };
-      }),
-      availableTariffs: [],
-      shoppingCart: []
     },
-    allPackages: _.times(14, function(i) {
+    courier_search_address: _.times(20, function(i) {
       return {
-        id: faker.random.number({ min:1000, max:9999 }),
-        name: faker.random.words(2),
-        type: {
-          id: faker.random.number({ min:1000, max:9999 }),
-          name: faker.name.firstName(),
-          unit: faker.internet.password(8,1)
-        },
-        value: faker.random.number({ min:1000, max:9999 }),
-        price: faker.finance.amount(100,900,2)
-      };
+        id: i,
+        latitude: Number(faker.address.latitude()),
+        longitude: Number(faker.address.longitude()),
+        address: faker.address.streetAddress("###")
+      }
     })
   };
 };
