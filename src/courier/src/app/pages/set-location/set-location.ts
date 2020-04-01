@@ -25,6 +25,8 @@ export class SetLocationPage implements OnInit {
     });
   }
 
+  select(selected: SearchAddressResponseModel) {
+    this.modalController.dismiss(selected);
   }
 
   goBack() {
