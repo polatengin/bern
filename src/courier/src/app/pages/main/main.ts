@@ -16,7 +16,7 @@ import { DeliveryListRequestModel, DeliveryListResponseModel } from '../../model
   styleUrls: ['./main.scss'],
 })
 export class MainPage implements OnInit {
-  constructor(private api: ApiService, private router: Router, private pickerController: PickerController) { }
+  constructor(private api: ApiService, private router: Router, private pickerController: PickerController, private modalController: ModalController) { }
 
   public request: DeliveryListRequestModel = {
     latitude: 0,
