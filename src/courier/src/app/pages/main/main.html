@@ -39,8 +39,17 @@
     </ion-list>
   </div>
 
-    <ion-card-content>
-      The coronavirus pandemic created new restrictions that grocery stores and Supermarkets  have to work under: In Israel, a business must not hold more than 10 customers within the same store. It was also said that citizens should avoid leaving home as much as possible.
-    </ion-card-content>
-  </ion-card>
+  <ion-list scroll *ngIf="!loading">
+    <ion-item *ngFor="let r of response; let i = index">
+      <ion-label>
+        <h2>{{ r.address }}</h2>
+        <h3>{{ r.firstName }} {{ r.lastName }}</h3>
+        <p>{{ r.dueDate | amTimeAgo }}</p>
+      </ion-label>
+      <ion-button slot="end" fill="clear" (click)="showDetails(r)">
+        Go <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
