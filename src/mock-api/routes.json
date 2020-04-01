@@ -1,5 +1,7 @@
 {
   "/courier/signup": "/courier_signup",
   "/courier/login": "/courier_login",
+  "/courier/main": "/courier_main",
   "/courier/address_from_coordinates": "/courier_address_from_coordinates",
+  "/courier/search_address": "/courier_search_address"
 }
