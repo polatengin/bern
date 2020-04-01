@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { PickerOptions } from "@ionic/core";
 import { PickerController, ModalController } from '@ionic/angular';
 
+import { SetLocationPage } from '../set-location/set-location';
+
 import { ApiService } from '../../services/api.service';
 
 import { DeliveryListRequestModel, DeliveryListResponseModel } from 'src/app/models/main.models';
