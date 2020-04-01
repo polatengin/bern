@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
-import { Platform } from '@ionic/angular';
+import { PickerOptions } from "@ionic/core";
+import { PickerController } from '@ionic/angular';
 
-import {
-  GoogleMaps,
-  GoogleMap,
-  GoogleMapsEvent,
-  Marker,
-  GoogleMapsAnimation,
-  MyLocation
-} from '@ionic-native/google-maps';
+import { ApiService } from '../../services/api.service';
+
+import { DeliveryListRequestModel, DeliveryListResponseModel } from 'src/app/models/main.models';
 
 @Component({
   selector: 'app-main',
@@ -17,26 +14,72 @@ import {
   styleUrls: ['./main.scss'],
 })
 export class MainPage implements OnInit {
-  constructor(private platform: Platform) { }
+  constructor(private api: ApiService, private router: Router, private pickerController: PickerController) { }
 
-  map: GoogleMap;
+  public request: DeliveryListRequestModel = {
+    latitude: 0,
+    longitude: 0,
+    range: 3
+  };
 
-  async ngOnInit() {
-    await this.platform.ready();
-    await this.loadMap();
+  public response: DeliveryListResponseModel[] = [];
+
+  public loading: boolean = true;
+
+  ngOnInit() {
+    navigator.geolocation.getCurrentPosition(_ => {
+      this.request.latitude = _.coords.latitude;
+      this.request.longitude = _.coords.longitude;
+
+      this.loadDeliveryList();
+    });
   }
 
-  loadMap() {
-    this.map = GoogleMaps.create('map_canvas', {
-      camera: {
-        target: {
-          lat: 43.0741704,
-          lng: -89.3809802
-        },
-        zoom: 18,
-        tilt: 30
-      }
+  showDetails(r: DeliveryListResponseModel) {
+    this.router.navigate(['delivery-details'], { state: { item: r } });
+  }
+
+  loadDeliveryList() {
+    this.loading = true;
+
+    this.api.deliveryList(this.request).subscribe(_ => {
+      this.response = _;
+
+      this.loading = false;
     });
+  }
+
+  async setRange() {
+    let options: PickerOptions = {
+      buttons: [
+        {
+          text: "Cancel",
+          role: 'cancel'
+        },
+        {
+          text:'Ok',
+          handler: _ => {
+            this.request.range = _.Range.value;
+
+            this.loadDeliveryList();
+          }
+        }
+      ],
+      columns:[{
+        name:'Range',
+        options:[
+          {text: '500 m', value: 0.5},
+          {text: '1 km', value: 1},
+          {text: '3 km', value: 3},
+          {text: '5 km', value: 5},
+          {text: '10 km', value: 10},
+          {text: 'any', value: 0}
+        ]
+      }]
+    };
+
+    let picker = await this.pickerController.create(options);
+    picker.present()
   }
 
 }
