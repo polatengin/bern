@@ -22,6 +22,7 @@ import { LoginPage } from './pages/login/login';
 import { SignUpPage } from './pages/signup/signup';
 import { SignUpVerifyPage } from './pages/signup-verify/signup-verify';
 import { MainPage } from './pages/main/main';
+import { ProfilePage } from './pages/profile/profile';
 import { SetLocationPage } from './pages/set-location/set-location';
 import { DeliveryDetailsPage } from './pages/delivery-details/delivery-details';
 
@@ -46,8 +47,8 @@ const routes: Routes = [
     path: 'main',
     component: MainPage
   }, {
-    path: 'set-location',
-    component: SetLocationPage
+    path: 'profile',
+    component: ProfilePage
   }, {
     path: 'delivery-details',
     component: DeliveryDetailsPage
@@ -62,6 +63,7 @@ const routes: Routes = [
     SignUpPage,
     SignUpVerifyPage,
     MainPage,
+    ProfilePage,
     SetLocationPage,
     DeliveryDetailsPage
   ],
