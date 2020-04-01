@@ -9,6 +9,10 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { AgmCoreModule } from '@agm/core';
+
+import { MomentModule } from 'ngx-moment';
+
 import { AppComponent } from './app.component';
 
 import { ApiService } from './services/api.service';
@@ -16,7 +20,10 @@ import { ApiService } from './services/api.service';
 import { LandingPage } from './pages/landing/landing';
 import { LoginPage } from './pages/login/login';
 import { SignUpPage } from './pages/signup/signup';
+import { SignUpVerifyPage } from './pages/signup-verify/signup-verify';
 import { MainPage } from './pages/main/main';
+import { SetLocationPage } from './pages/set-location/set-location';
+import { DeliveryDetailsPage } from './pages/delivery-details/delivery-details';
 
 const routes: Routes = [
   {
@@ -33,8 +40,17 @@ const routes: Routes = [
     path: 'signup',
     component: SignUpPage
   }, {
+    path: 'signup-verify',
+    component: SignUpVerifyPage
+  }, {
     path: 'main',
     component: MainPage
+  }, {
+    path: 'set-location',
+    component: SetLocationPage
+  }, {
+    path: 'delivery-details',
+    component: DeliveryDetailsPage
   }
 ];
 
@@ -44,13 +60,20 @@ const routes: Routes = [
     LandingPage,
     LoginPage,
     SignUpPage,
-    MainPage
+    SignUpVerifyPage,
+    MainPage,
+    SetLocationPage,
+    DeliveryDetailsPage
   ],
   entryComponents: [],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    MomentModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB0Ty2hDtvG1z12leVpRKAbtytHkccM9hg'
+    }),
     IonicModule.forRoot(),
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
