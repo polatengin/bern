@@ -29,4 +29,7 @@ export class ApiService {
     return this.http.post<DeliveryListResponseModel[]>(BASE + 'main', model);
   }
 
+  getAddressFromCoordinates(model: AddressFromCoordinatesRequestModel): Observable<AddressFromCoordinatesResponseModel> {
+    return this.http.post<AddressFromCoordinatesResponseModel>(BASE + 'address_from_coordinates', model);
+  }
 }
