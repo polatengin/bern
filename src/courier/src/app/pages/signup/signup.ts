@@ -15,7 +15,7 @@ import { SignUpRequestModel, SignUpResponseModel } from '../../models/signup.mod
 export class SignUpPage implements OnInit {
   constructor(private api: ApiService, private router: Router, private toastController: ToastController) { }
 
-  model: SignUpModel = new SignUpModel();
+  model: SignUpRequestModel = new SignUpRequestModel();
 
   ngOnInit() {
   }
