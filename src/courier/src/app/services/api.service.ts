@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { SignUpModel } from '../models/signup.models';
+import { SignUpRequestModel, SignUpResponseModel } from '../models/signup.models';
 import { LoginModel } from '../models/login.models';
 
 @Injectable({
@@ -14,8 +14,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  signup(model: SignUpModel): Observable<boolean> {
-    return this.http.post<boolean>(this.base + 'courier/signup', model);
+  signup(model: SignUpRequestModel): Observable<SignUpResponseModel> {
+    return this.http.post<SignUpResponseModel>(this.base + 'courier/signup', model);
   }
 
   login(model: LoginModel): Observable<boolean> {
