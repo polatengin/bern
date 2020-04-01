@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
+import { ModalController } from '@ionic/angular';
+
 @Component({
   selector: 'app-set-location',
   templateUrl: './set-location.html',
