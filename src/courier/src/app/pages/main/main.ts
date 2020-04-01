@@ -52,6 +52,9 @@ export class MainPage implements OnInit {
   }
 
   async setLocation() {
+    const modal = await this.modalController.create({
+      component: SetLocationPage
+    });
   }
 
   async setRange() {
