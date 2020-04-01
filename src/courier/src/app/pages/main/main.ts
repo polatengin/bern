@@ -51,6 +51,9 @@ export class MainPage implements OnInit {
     });
   }
 
+  async setLocation() {
+  }
+
   async setRange() {
     let options: PickerOptions = {
       buttons: [
