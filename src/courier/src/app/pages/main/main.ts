@@ -56,6 +56,8 @@ export class MainPage implements OnInit {
       component: SetLocationPage
     });
     await modal.present();
+    const { data } = await modal.onDidDismiss();
+
   }
 
   async setRange() {
