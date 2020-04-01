@@ -1,12 +1,3 @@
-<ion-header translucent>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Grow Cherry</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content fullscreen>
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -51,6 +42,14 @@
   <div class="ion-padding">
     <ion-button expand="block" class="ion-no-margin" (click)="createAccount()">Sign Up</ion-button>
   </div>
+
+  <div class="ion-padding">
+    <ion-item button lines="none" [routerLink]="['/login']">
+      <ion-label class="ion-text-center">
+        Already have an account?
+        <ion-text class="underline" color="primary">Sign In</ion-text>
+      </ion-label>
+    </ion-item>
   </div>
 
 </ion-content>
