@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 import { SignUpRequestModel, SignUpResponseModel } from '../models/signup.models';
 import { LoginModel } from '../models/login.models';
+import { DeliveryListRequestModel, DeliveryListResponseModel } from '../models/main.models';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,10 @@ export class ApiService {
 
   login(model: LoginModel): Observable<boolean> {
     return this.http.post<boolean>(this.base + 'courier/login', model);
+  }
+
+  deliveryList(model: DeliveryListRequestModel): Observable<DeliveryListResponseModel[]> {
+    return this.http.post<DeliveryListResponseModel[]>(this.base + 'courier/main', model);
   }
 
 }
