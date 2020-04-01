@@ -2,11 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+import { environment } from '../../environments/environment';
+
 import { SignUpRequestModel, SignUpResponseModel } from '../models/signup.models';
 import { LoginModel } from '../models/login.models';
 import { DeliveryListRequestModel, DeliveryListResponseModel } from '../models/main.models';
-
-import { environment } from '../../environments/environment';
+import { AddressFromCoordinatesRequestModel, AddressFromCoordinatesResponseModel, SearchAddressRequestModel, SearchAddressResponseModel } from '../models/set-location.models';
 
 const BASE: string = environment.apiUrl + 'courier/';
 
