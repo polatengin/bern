@@ -3,9 +3,9 @@ import { Router } from '@angular/router';
 
 import { ToastController } from '@ionic/angular';
 
-import { SignUpModel } from '../../models/signup.models';
-
 import { ApiService } from 'src/app/services/api.service';
+
+import { SignUpRequestModel, SignUpResponseModel } from '../../models/signup.models';
 
 @Component({
   selector: 'app-signup',
