@@ -16,6 +16,7 @@
 
   <ion-card>
     <ion-button size="small" shape="round" style="z-index:2; position:absolute;" [routerLink]="['/set-location']"><ion-icon slot="start" name="locate-outline"></ion-icon> My current location</ion-button>
+    <ion-button size="small" shape="round" style="z-index:2; position:absolute; right:0;" (click)="setRange()">3 km <ion-icon slot="end" name="chevron-down-outline"></ion-icon></ion-button>
     <agm-map
       [style.height.px]="300"
       [zoom]="18"
