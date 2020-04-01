@@ -27,4 +27,10 @@
 
   <ion-searchbar (input)="search($event)" autocorrect="off"></ion-searchbar>
 
+  <ion-list lines="none">
+    <ion-item button detail *ngFor="let item of addressList" (click)="select(item)">
+      <ion-label>{{ item.address }}</ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
