@@ -58,6 +58,8 @@ export class MainPage implements OnInit {
     await modal.present();
     const { data } = await modal.onDidDismiss();
 
+    this.request.latitude = data.latitude;
+    this.request.longitude = data.longitude;
   }
 
   async setRange() {
