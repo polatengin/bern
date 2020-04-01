@@ -14,7 +14,14 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-card>
     <ion-card-header>
       <ion-card-title>Your current location</ion-card-title>
     </ion-card-header>
+
+    <ion-item lines="none">
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>{{ currentAddress }}</ion-label>
+    </ion-item>
+  </ion-card>
 </ion-content>
