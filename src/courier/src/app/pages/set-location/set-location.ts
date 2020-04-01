@@ -13,9 +13,23 @@ import { AddressFromCoordinatesRequestModel, SearchAddressRequestModel, SearchAd
   styleUrls: ['./set-location.scss'],
 })
 export class SetLocationPage implements OnInit {
-  constructor(private location: Location) { }
+  constructor(private location: Location, private modalController: ModalController, private api: ApiService) { }
+
+  currentAddress: string;
+  addressList: SearchAddressResponseModel[] = [];
 
   ngOnInit() {
+    navigator.geolocation.getCurrentPosition((position) => {
+      let request = new AddressFromCoordinatesRequestModel();
+      request.latitude = position.coords.latitude;
+      request.longitude = position.coords.longitude;
+
+      this.api.getAddressFromCoordinates(request).subscribe(_ => {
+        this.currentAddress = _.address;
+      });
+    });
+  }
+
   search(event: InputEvent) {
     let model: SearchAddressRequestModel = new SearchAddressRequestModel();
     model.keyword = (event.target as HTMLInputElement).value;
