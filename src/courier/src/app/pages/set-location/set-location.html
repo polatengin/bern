@@ -24,4 +24,7 @@
       <ion-label>{{ currentAddress }}</ion-label>
     </ion-item>
   </ion-card>
+
+  <ion-searchbar (input)="search($event)" autocorrect="off"></ion-searchbar>
+
 </ion-content>
