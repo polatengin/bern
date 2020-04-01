@@ -1,0 +1,39 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-button slot="start" fill="clear" (click)="goBack()">
+      <ion-icon slot="start" name="chevron-back-outline"></ion-icon>
+    </ion-button>
+    <ion-title>Delivery Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Delivery Details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <agm-map
+      [style.height.px]="300"
+      [latitude]="model.latitude"
+      [longitude]="model.longitude">
+        <agm-circle [latitude]="model.latitude" [longitude]="model.longitude" [radius]="5000"></agm-circle>
+    </agm-map>
+  </ion-card>
+
+  <ion-list>
+    <ion-item *ngFor="let r of response; let i = index">
+      <ion-label>
+        <h2>{{ r.address }}</h2>
+        <h3>{{ r.firstName }} {{ r.lastName }}</h3>
+        <p>{{ r.dueDate }}</p>
+      </ion-label>
+      <ion-button slot="end" fill="clear" (click)="showDetails(r)">
+        Go <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
