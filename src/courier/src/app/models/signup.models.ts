@@ -4,3 +4,7 @@ export class SignUpRequestModel {
   phoneNumber: string;
   password: string;
 }
+
+export class SignUpResponseModel {
+  result: boolean;
+}
