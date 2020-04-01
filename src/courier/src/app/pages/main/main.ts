@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { PickerOptions } from "@ionic/core";
-import { PickerController } from '@ionic/angular';
+import { PickerController, ModalController } from '@ionic/angular';
+
+import { SetLocationPage } from '../set-location/set-location';
 
 import { ApiService } from '../../services/api.service';
 
-import { DeliveryListRequestModel, DeliveryListResponseModel } from 'src/app/models/main.models';
+import { DeliveryListRequestModel, DeliveryListResponseModel } from '../../models/main.models';
 
 @Component({
   selector: 'app-main',
@@ -14,7 +16,7 @@ import { DeliveryListRequestModel, DeliveryListResponseModel } from 'src/app/mod
   styleUrls: ['./main.scss'],
 })
 export class MainPage implements OnInit {
-  constructor(private api: ApiService, private router: Router, private pickerController: PickerController) { }
+  constructor(private api: ApiService, private router: Router, private pickerController: PickerController, private modalController: ModalController) { }
 
   public request: DeliveryListRequestModel = {
     latitude: 0,
@@ -47,6 +49,17 @@ export class MainPage implements OnInit {
 
       this.loading = false;
     });
+  }
+
+  async setLocation() {
+    const modal = await this.modalController.create({
+      component: SetLocationPage
+    });
+    await modal.present();
+    const { data } = await modal.onDidDismiss();
+
+    this.request.latitude = data.latitude;
+    this.request.longitude = data.longitude;
   }
 
   async setRange() {
