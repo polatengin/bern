@@ -6,25 +6,27 @@ import { SignUpRequestModel, SignUpResponseModel } from '../models/signup.models
 import { LoginModel } from '../models/login.models';
 import { DeliveryListRequestModel, DeliveryListResponseModel } from '../models/main.models';
 
+import { environment } from '../../environments/environment';
+
+const BASE: string = environment.apiUrl + 'courier/';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  private base: string = 'http://localhost:3000/';
-
   constructor(private http: HttpClient) { }
 
   signup(model: SignUpRequestModel): Observable<SignUpResponseModel> {
-    return this.http.post<SignUpResponseModel>(this.base + 'courier/signup', model);
+    return this.http.post<SignUpResponseModel>(BASE + 'courier/signup', model);
   }
 
   login(model: LoginModel): Observable<boolean> {
-    return this.http.post<boolean>(this.base + 'courier/login', model);
+    return this.http.post<boolean>(BASE + 'login/', model);
   }
 
   deliveryList(model: DeliveryListRequestModel): Observable<DeliveryListResponseModel[]> {
-    return this.http.post<DeliveryListResponseModel[]>(this.base + 'courier/main', model);
+    return this.http.post<DeliveryListResponseModel[]>(BASE + 'courier/main', model);
   }
 
 }
