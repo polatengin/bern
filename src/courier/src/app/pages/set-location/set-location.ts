@@ -16,6 +16,15 @@ export class SetLocationPage implements OnInit {
   constructor(private location: Location) { }
 
   ngOnInit() {
+  search(event: InputEvent) {
+    let model: SearchAddressRequestModel = new SearchAddressRequestModel();
+    model.keyword = (event.target as HTMLInputElement).value;
+
+    this.api.searchAddress(model).subscribe(_ => {
+      this.addressList = _;
+    });
+  }
+
   }
 
   goBack() {
