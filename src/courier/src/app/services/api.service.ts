@@ -32,4 +32,9 @@ export class ApiService {
   getAddressFromCoordinates(model: AddressFromCoordinatesRequestModel): Observable<AddressFromCoordinatesResponseModel> {
     return this.http.post<AddressFromCoordinatesResponseModel>(BASE + 'address_from_coordinates', model);
   }
+
+  searchAddress(model: SearchAddressRequestModel): Observable<SearchAddressResponseModel[]> {
+    return this.http.post<SearchAddressResponseModel[]>(BASE + 'search_address', model);
+  }
+
 }
