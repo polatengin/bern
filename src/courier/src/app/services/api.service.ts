@@ -18,15 +18,15 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   signup(model: SignUpRequestModel): Observable<SignUpResponseModel> {
-    return this.http.post<SignUpResponseModel>(BASE + 'courier/signup', model);
+    return this.http.post<SignUpResponseModel>(BASE + 'signup', model);
   }
 
   login(model: LoginModel): Observable<boolean> {
-    return this.http.post<boolean>(BASE + 'login/', model);
+    return this.http.post<boolean>(BASE + 'login', model);
   }
 
   deliveryList(model: DeliveryListRequestModel): Observable<DeliveryListResponseModel[]> {
-    return this.http.post<DeliveryListResponseModel[]>(BASE + 'courier/main', model);
+    return this.http.post<DeliveryListResponseModel[]>(BASE + 'main', model);
   }
 
 }
