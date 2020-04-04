@@ -5,13 +5,8 @@
   "author": "Grow Cherry",
   "homepage": "https://grow-cherry.com/",
   "scripts": {
-    "ng": "ng",
-    "start": "ionic serve --port 8200 --no-open",
-    "browser": "ionic capacitor run web",
-    "android": "ionic capacitor run android",
-    "build": "ng build",
-    "cap-init": "npx @capacitor/cli init growcherry com.growcherry.courier",
-    "cap-sync": "npx @capacitor/cli sync"
+    "ionic": "ionic serve --port 8200 --no-open",
+    "start": "ionic cordova run browser --port 8200"
   },
   "private": true,
   "dependencies": {
