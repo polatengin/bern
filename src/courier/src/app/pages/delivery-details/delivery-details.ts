@@ -26,4 +26,8 @@ export class DeliveryDetailsPage implements OnInit {
     this.location.back();
   }
 
+  start() {
+    
+  }
+
 }
