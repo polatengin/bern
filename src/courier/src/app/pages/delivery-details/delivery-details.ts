@@ -27,7 +27,7 @@ export class DeliveryDetailsPage implements OnInit {
   }
 
   start() {
-    
+    console.log('starting delivery...');
   }
 
 }
