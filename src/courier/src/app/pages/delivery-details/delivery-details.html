@@ -23,17 +23,5 @@
     </agm-map>
   </ion-card>
 
-  <ion-list>
-    <ion-item *ngFor="let r of response; let i = index">
-      <ion-label>
-        <h2>{{ r.address }}</h2>
-        <h3>{{ r.firstName }} {{ r.lastName }}</h3>
-        <p>{{ r.dueDate }}</p>
-      </ion-label>
-      <ion-button slot="end" fill="clear" (click)="showDetails(r)">
-        Go <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-      </ion-button>
-    </ion-item>
-  </ion-list>
 
 </ion-content>
