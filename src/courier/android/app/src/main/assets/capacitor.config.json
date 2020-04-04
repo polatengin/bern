@@ -1,8 +1,0 @@
-{
-  "appId": "com.growcherry.courier",
-  "appName": "growcherry",
-  "bundledWebRuntime": false,
-  "npmClient": "npm",
-  "webDir": "www",
-  "cordova": {}
-}
