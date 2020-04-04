@@ -31,6 +31,15 @@ module.exports = function () {
         longitude: Number(faker.address.longitude()),
         address: faker.address.streetAddress("###")
       }
+    }),
+    courier_order_list: _.times(18, function(i) {
+      return {
+        id: i,
+        product_name: faker.commerce.productName(),
+        product_category: faker.commerce.department(),
+        count: faker.random.number({min:1, max:20}),
+        image_url: "https://loremflickr.com/320/240/food?random="+i
+      }
     })
   };
 };
