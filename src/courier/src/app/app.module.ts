@@ -8,6 +8,7 @@ import { PreloadAllModules, RouterModule, Routes, RouteReuseStrategy } from '@an
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -69,7 +70,8 @@ const routes: Routes = [
     MainPage,
     ProfilePage,
     SetLocationPage,
-    DeliveryDetailsPage
+    DeliveryDetailsPage,
+    OrderListPage
   ],
   entryComponents: [],
   imports: [
@@ -86,6 +88,7 @@ const routes: Routes = [
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     ApiService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
