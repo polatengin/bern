@@ -1,3 +1,11 @@
 .underline {
   text-decoration: underline;
 }
+
+.input {
+  border: 1px solid var(--ion-color-primary);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  padding-left: 10px !important;
+}
