@@ -4,19 +4,18 @@
       <div class="ion-color ion-color-primary" style="background-color: var(--ion-color-primary);">
         <div class="ion-padding">
           <ion-avatar class="ion-margin-vertical">
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
+            <img src="https://randomuser.me/api/portraits/men/46.jpg" />
           </ion-avatar>
-          <ion-title class="ion-no-padding ion-margin-vertical" style="color:var(--ion-color-primary-contrast);">Yael Ron</ion-title>
+          <ion-title class="ion-no-padding ion-margin-vertical" style="color:var(--ion-color-primary-contrast);">Engin Polat</ion-title>
           <ion-label class="ion-padding-vertical" style="color:var(--ion-color-primary-contrast);">+90 532 216 58 71</ion-label>
         </div>
-        <div>
-          <ion-menu-toggle auto-hide="false" *ngFor="let m of menuItems; let i = index">
-            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[m.url]" lines="none" [class.selected]="selectedIndex==i" style="border-radius:0;">
-              <ion-icon slot="start" [name]="m.icon"></ion-icon>
-              <ion-label>{{ m.title }}</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-          </div>
+        <ion-menu-toggle auto-hide="false" *ngFor="let m of menuItems; let i = index">
+          <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[m.url]" lines="none" [class.border-left-primary]="selectedIndex==i" [class.border-left-background]="selectedIndex!=i" style="border-radius:0;">
+            <ion-icon slot="start" [name]="m.icon"></ion-icon>
+            <ion-label>{{ m.title }}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </div>
       <ion-footer class="ion-no-border">
         <ion-list>
           <ion-item lines="none">
