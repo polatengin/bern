@@ -39,4 +39,8 @@ export class ApiService {
     return this.http.post<SearchAddressResponseModel[]>(BASE + 'search_address', model);
   }
 
+  orderList(id: number): Observable<OrderResponseModel[]> {
+    return this.http.post<OrderResponseModel[]>(BASE + 'order_list', { id: id });
+  }
+
 }
