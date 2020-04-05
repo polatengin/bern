@@ -25,6 +25,7 @@ import { MainPage } from './pages/main/main';
 import { ProfilePage } from './pages/profile/profile';
 import { SetLocationPage } from './pages/set-location/set-location';
 import { DeliveryDetailsPage } from './pages/delivery-details/delivery-details';
+import { OrderListPage } from './pages/order-list/order-list';
 
 const routes: Routes = [
   {
@@ -52,6 +53,9 @@ const routes: Routes = [
   }, {
     path: 'delivery-details',
     component: DeliveryDetailsPage
+  }, {
+    path: 'order-list',
+    component: OrderListPage
   }
 ];
 
