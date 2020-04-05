@@ -29,4 +29,7 @@ export class OrderListPage implements OnInit {
       this.response = _;
     });
   }
+  goBack() {
+    this.location.back();
+  }
 }
