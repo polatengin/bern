@@ -30,3 +30,40 @@ There are 2 projects in this repo, `courier` (Mobile app project), `mock-api` (M
 
 * `courier`: This project uses `ionic` to build an _IOS_ and _Android_ apps for elderly people. Underlyingly this project uses `angular` with `typescript` and `sass`
 
+## Guideline
+
+Here is the guideline to run the project on your machine;
+
+* Clone the project by running the following command on your _Terminal_
+
+```bash
+git clone https://github.com/polatengin/bern.git
+```
+
+* Go to `src/mock-api` folder and install `npm` dependencies by running the following command on your _Terminal_
+
+```bash
+cd src/mock-api
+npm i
+```
+
+* Go to `src/courier` folder and install `npm` dependencies by running the following command on your _Terminal_
+
+```bash
+cd src/courier
+npm i
+```
+
+* Run the _Mock Backend_ project first
+
+```bash
+cd src/mock-api
+npm run start
+```
+
+* Run the _Courier_ project
+
+```bash
+cd src/courier
+npm run start
+```
