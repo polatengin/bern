@@ -1,0 +1,39 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Order List</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="primary" fill="solid" (click)="done()">Done</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Order List</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list scroll lines="none">
+    <ion-item *ngFor="let r of response">
+      <ion-avatar slot="start">
+        <img [src]="r.image_url">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ r.product_name }} x {{ r.count }}</h2>
+        <h3>{{ r.product_category }}</h3>
+      </ion-label>
+      <ion-checkbox slot="end"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="block" (click)="scanBarcode()">
+    <ion-icon slot="start" name="barcode-outline"></ion-icon>
+    Barcode Scanner
+  </ion-button>
+</ion-footer>
