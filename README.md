@@ -28,3 +28,5 @@ There are 2 projects in this repo, `courier` (Mobile app project), `mock-api` (M
 
 * `mock-api`: This project uses `json-server` npm package to generate mock api which returns `json` output. Also it has `faker` npm package to generate real-looking data, such as, first name, last name, product name, location, address, etc.
 
+* `courier`: This project uses `ionic` to build an _IOS_ and _Android_ apps for elderly people. Underlyingly this project uses `angular` with `typescript` and `sass`
+
