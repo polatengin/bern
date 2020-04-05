@@ -1,6 +1,6 @@
 # GrowCherry application (Fast and local groceries delivery)
 
-[Hackorona - Creativity will not be quarantined](https://hackorona.in.dev/)
+This is the **GrowCherry** project from [Hackorona - Creativity will not be quarantined](https://hackorona.in.dev/) Hackathon
 
 ## Problem
 
