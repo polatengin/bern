@@ -26,3 +26,5 @@ We're going to build a system of 3 different platforms for different end users a
 
 There are 2 projects in this repo, `courier` (Mobile app project), `mock-api` (Mock Backend project)
 
+* `mock-api`: This project uses `json-server` npm package to generate mock api which returns `json` output. Also it has `faker` npm package to generate real-looking data, such as, first name, last name, product name, location, address, etc.
+
