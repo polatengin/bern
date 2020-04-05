@@ -20,7 +20,7 @@ Locally customized a global solution
 
 We at GrowCherry see this opportunity to impact a global problem with a unique local customized solution . By creating a local solution we will create on-going global solution to one of the main problems humanity needs to deal with in times of social distancing, quarantine and movement restrictions.
 
-<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://github.com/polatengin/bern/raw/master/assets/growcherry.pptx' width='100%' height='600px' frameborder='0'>
+<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://github.com/polatengin/bern/raw/master/assets/growcherry.pptx' width='100%' height='600px' frameborder='0'></iframe>
 
 ## Projects
 
