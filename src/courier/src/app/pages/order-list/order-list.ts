@@ -35,4 +35,11 @@ export class OrderListPage implements OnInit {
   done() {
     this.location.back();
   }
+  scanBarcode() {
+    this.barcodeScanner.scan().then(barcodeData => {
+      console.log('Barcode data', barcodeData);
+    }).catch(err => {
+      console.log('Error', err);
+    });
+  }
 }
