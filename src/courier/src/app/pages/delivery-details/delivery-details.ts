@@ -13,6 +13,14 @@ import { DeliveryListResponseModel } from '../../models/main.models';
 export class DeliveryDetailsPage implements OnInit {
   constructor(private location: Location, private router: Router) { }
 
+  public buttonText: string = 'Go';
+  public buttonIcon: string = 'chevron-forward-outline';
+
+  public step: number = -1;
+  public step0: string = 'dark';
+  public step1: string = 'dark';
+  public step2: string = 'dark';
+
   public model: DeliveryListResponseModel = new DeliveryListResponseModel();
 
   ngOnInit() {
@@ -27,7 +35,29 @@ export class DeliveryDetailsPage implements OnInit {
   }
 
   start() {
-    console.log('starting delivery...');
+    this.step++;
+
+    switch(this.step) {
+      case 0:
+        this.buttonText = 'Report arrival';
+        this.buttonIcon = 'checkmark-outline';
+        this.step0 = 'primary';
+        break;
+      case 1:
+        this.buttonText = 'Order list';
+        this.buttonIcon = 'list-circle-outline';
+        this.step1 = 'primary';
+        break;
+      case 2:
+        this.router.navigate(['order-list'], { state: { item: this.model } });
+        this.buttonText = 'Delivery finished';
+        this.buttonIcon = 'checkmark-outline';
+        this.step2 = 'primary';
+        break;
+      case 3:
+        this.location.back();
+        break;
+    }
   }
 
 }
