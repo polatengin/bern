@@ -5,16 +5,17 @@
 
   <ion-card style="box-shadow:none;">
     <ion-list lines="none">
-    <ion-item>
-      <ion-label position="stacked">Phone Number <ion-text color="danger">*</ion-text></ion-label>
-      <ion-input required type="tel" [(ngModel)]="model.phoneNumber"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Phone Number <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input class="input" autocomplete="off" autofocus type="tel" [(ngModel)]="model.phoneNumber"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">Password <ion-text color="danger">*</ion-text></ion-label>
-      <ion-input required type="password" [(ngModel)]="model.password"></ion-input>
-    </ion-item>
-  </ion-list>
+      <ion-item>
+        <ion-label position="stacked">Password <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input class="input" autocomplete="off" type="password" [(ngModel)]="model.password"></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 
   <div class="ion-padding">
     <ion-button expand="block" class="ion-no-margin" (click)="login()">Login</ion-button>
