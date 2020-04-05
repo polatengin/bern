@@ -31,7 +31,7 @@ import { OrderListPage } from './pages/order-list/order-list';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'landing',
+    redirectTo: 'signup',
     pathMatch: 'full'
   }, {
     path: 'landing',
