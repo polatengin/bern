@@ -8,6 +8,7 @@ import { SignUpRequestModel, SignUpResponseModel } from '../models/signup.models
 import { LoginModel } from '../models/login.models';
 import { DeliveryListRequestModel, DeliveryListResponseModel } from '../models/main.models';
 import { AddressFromCoordinatesRequestModel, AddressFromCoordinatesResponseModel, SearchAddressRequestModel, SearchAddressResponseModel } from '../models/set-location.models';
+import { OrderResponseModel } from '../models/order-list.models';
 
 const BASE: string = environment.apiUrl + 'courier/';
 
