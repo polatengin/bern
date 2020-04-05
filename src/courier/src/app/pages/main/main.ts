@@ -81,7 +81,6 @@ export class MainPage implements OnInit {
       columns:[{
         name:'Range',
         options:[
-          {text: '500 m', value: 0.5},
           {text: '1 km', value: 1},
           {text: '3 km', value: 3},
           {text: '5 km', value: 5},
