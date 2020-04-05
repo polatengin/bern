@@ -5,6 +5,7 @@ export class DeliveryListRequestModel {
 }
 
 export class DeliveryListResponseModel {
+  id: number;
   latitude: number;
   longitude: number;
   range: number;
