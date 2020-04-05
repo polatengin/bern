@@ -21,3 +21,8 @@ We're going to build a system of 3 different platforms for different end users a
 * Food Courier - Many people have lost their permanent jobs due to the Corona crisis, we want to create for those individuals who can work as a food courier - a food delivery system.
 
 * Digital food ordering system - For people who find it difficult to leave their home, or have difficulty ordering through other sites because of long waiting times, lack of couriers or lack of products.
+
+## Projects
+
+There are 2 projects in this repo, `courier` (Mobile app project), `mock-api` (Mock Backend project)
+
