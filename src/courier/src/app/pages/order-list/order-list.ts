@@ -17,4 +17,7 @@ import { OrderResponseModel } from '../../models/order-list.models';
 })
 export class OrderListPage implements OnInit {
   constructor(private api: ApiService, private barcodeScanner: BarcodeScanner, private location: Location, private router: Router) { }
+  public model: DeliveryListResponseModel = new DeliveryListResponseModel();
+
+  public response: OrderResponseModel[] = [];
 }
