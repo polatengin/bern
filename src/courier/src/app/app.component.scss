@@ -114,6 +114,10 @@ ion-note {
   color: var(--ion-color-medium-shade);
 }
 
-ion-item.selected {
-  --color: var(--ion-color-primary);
+ion-item.border-left-primary {
+  border-left: 4px solid var(--ion-color-primary);
+}
+
+ion-item.border-left-background {
+  border-left: 4px solid var(--ion-item-background);
 }
