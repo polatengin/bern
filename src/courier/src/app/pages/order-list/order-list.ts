@@ -32,4 +32,7 @@ export class OrderListPage implements OnInit {
   goBack() {
     this.location.back();
   }
+  done() {
+    this.location.back();
+  }
 }
