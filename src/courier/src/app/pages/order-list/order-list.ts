@@ -20,4 +20,13 @@ export class OrderListPage implements OnInit {
   public model: DeliveryListResponseModel = new DeliveryListResponseModel();
 
   public response: OrderResponseModel[] = [];
+  ngOnInit() {
+    let state = this.router.getCurrentNavigation().extras.state || {};
+
+    this.model = state.item || {};
+
+    this.api.orderList(this.model.id).subscribe(_ => {
+      this.response = _;
+    });
+  }
 }
