@@ -16,4 +16,5 @@ import { OrderResponseModel } from '../../models/order-list.models';
   styleUrls: ['./order-list.scss'],
 })
 export class OrderListPage implements OnInit {
+  constructor(private api: ApiService, private barcodeScanner: BarcodeScanner, private location: Location, private router: Router) { }
 }
