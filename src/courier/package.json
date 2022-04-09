@@ -27,7 +27,7 @@
     "cordova-android": "8.1.0",
     "cordova-browser": "6.0.0",
     "core-js": "3.6.4",
-    "moment": "2.24.0",
+    "moment": "2.29.2",
     "ngx-moment": "3.5.0",
     "phonegap-plugin-barcodescanner": "8.1.0",
     "rxjs": "6.5.5",
